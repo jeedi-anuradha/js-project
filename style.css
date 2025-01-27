@@ -1,0 +1,302 @@
+/* General Reset and Body Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Styling */
+.logo {
+  width: 150px;
+  height: 40px;
+  /* background-image: url('your-logo-url.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Search bar Styling */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  padding: 5px 15px;
+}
+
+.input {
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-radius: 25px;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  outline: gray;
+}
+
+.search-icon {
+  font-size: 20px;
+  color: #555;
+  margin-left: 10px;
+  cursor: pointer;
+
+}
+
+/* Sidebar Styling */
+.side-bar {
+  display: flex;
+  gap: 15px;
+}
+
+.side-bar a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.side-bar a:hover {
+  color: #007bff;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .search-bar {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .side-bar {
+    display: none; /* Hide sidebar on tablet or smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Header - Stack elements vertically */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Space between logo and search bar */
+  }
+
+  .side-bar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .side-bar a {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .side-bar a:hover {
+    color: #0056b3;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile view adjustments */
+  header {
+    padding: 15px 10px;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  .input {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+
+  .search-icon {
+    font-size: 18px;
+  }
+
+  .side-bar a {
+    font-size: 12px;
+  }
+
+  .side-bar a:hover {
+    color: #003366;
+  }
+}
+
+/* Categories and Buttons */
+#btn-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#btn-container button {
+  padding: 10px;
+  background-color: #314253;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#btn-container button:hover {
+  background-color: #1e242c;
+}
+/* Book Container and Item Styling */
+.main-container, #best-seller, #new-arrivels, #trend {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#best-seller h3, #new-arrivels h3, #trend h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.main-container div, #best-seller div, #new-arrivels div, #trend div {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(20% - 20px);
+  min-width: 200px;
+  box-sizing: border-box;
+}
+
+.main-container img, #best-seller img, #new-arrivels img, #trend img {
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 50px;
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  margin: 20px;
+}
+
+.footer-column h5 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.footer-column p, .footer-column ul, .footer-column a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.social-links a {
+  display: block;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ddd;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #222;
+  padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .main-container div, #best-seller div, #new-arrivels div, #trend div {
+      width: calc(25% - 20px); /* 4 items per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .main-container div, #best-seller div, #new-arrivels div, #trend div {
+      width: calc(33.333% - 20px); /* 3 items per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container div, #best-seller div, #new-arrivels div, #trend div {
+      width: calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container div, #best-seller div, #new-arrivels div, #trend div {
+      width: 100%; /* 1 item per row */
+  }
+  
+  .search-bar {
+      max-width: 100%;
+  }
+
+  .side-bar {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  footer {
+      padding: 20px 0;
+  }
+  .footer-column {
+      margin: 15px;
+  }
+}
